@@ -1,0 +1,378 @@
+<html>
+    <head>
+        <title>Icy Quake</title>
+        <link rel="icon" href="https://www.charta-der-vielfalt.de/uploads/tx_dreipccdvdiversity/favicon_rund_180x180.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lustria&family=Permanent+Marker&display=swap" rel="stylesheet">
+        <style>
+             *{
+                margin:0px;
+               
+            }
+           
+            .title{
+                display:flex;
+                justify-content: space-around;
+                background-color: rgba(253, 237, 245, 0.744);
+                
+            }
+            .logo{
+                mix-blend-mode: multiply;
+                width: 100px;
+                height: 100px;
+                position: relative;
+                animation: example 10s infinite;
+                animation-timing-function: ease;
+            } 
+            @keyframes example {
+                    
+                    0% {
+                        left:0px;
+                         top:0px;
+                        }
+                    30%{
+                        left:150px;
+                        top:0px;
+                    }
+                    60%{
+                        left:-150px;
+                        top:0px;
+                    }
+                    90%{
+                        left:0px;
+                        top:0px;
+                    }
+            }
+            .name{
+                width:42%;
+                font-size:60px;
+                font-style: oblique;
+                position:relative;
+                top:1.5vh;
+                text-align: center;
+                font-weight:bolder;
+                text-shadow: 5px 5px  rgba(150, 217, 250, 0.774);     
+                -webkit-text-fill-color:rgba(3, 65, 107, 0.692);              
+            }
+            .nav{
+                width:100%;
+                height:10vh;
+                background-color: rgb(143, 68, 98);
+                display:flex;
+                justify-content: space-around;
+                
+            }
+            .nav div{
+                position: relative;
+                top:3vh;
+            }
+            .nav a{
+                text-decoration: none;
+                font-size: larger;
+                font-weight:550;
+                color:rgb(240, 240, 221);
+            }
+            .nav a:after{
+                content:"";
+                position: absolute;
+                background-color:rgb(240, 240, 221);
+                height:3px;
+                width:0;
+                left:0;
+                bottom:5vh;
+                transition: 0.3s;
+            }
+            .nav a:hover:after{
+                width:100%;
+            }
+            .container{
+                background-color: rgba(253, 237, 245, 0.744);                
+            }
+            .content{
+                padding: 8vh;
+                font-style: oblique;
+                color:rgba(110, 7, 7, 0.897);
+                font-size:18px;
+                font-weight: 600;
+                line-height:140%;
+                letter-spacing:0.2px;
+                font-family:monospace;
+                background-color: rgba(243, 230, 236, 0.103); 
+            }
+            .quote{
+                position:relative;
+                bottom:1vh;
+            }
+            .row1,.row2,.row3{
+                display:flex;
+                justify-content: space-around;
+                width:100%;
+                padding-top: 4vh;
+            }
+            .details input{
+                width:25%;
+                height:5vh;
+                border: 2px solid grey;
+                border-radius: 5px;
+            }
+            ::placeholder{
+                text-align: center;
+                color:rgb(117, 113, 113);
+                
+            }
+            .reference{
+                padding-top:5vh;
+                padding-left:4%;
+            }
+            .reference select{
+                width:26%;
+                height:5vh;
+                padding-left:5%;
+                border: 2px solid grey;
+                border-radius: 5px;
+                
+            }
+            select{
+                margin-top: 1vh;
+            
+            }
+            
+            .code{
+                padding-left:4%;
+                padding-top: 4vh;
+            }
+            .incode{
+                padding-top: 1vh;
+            }
+            .incode input{
+                height:4vh;
+                border:2px solid grey;
+                border-radius: 5px;
+                text-align: center;
+            }
+            .incode button{
+                border:1px solid black;
+                border-radius:5px;
+            }
+            .feedback{
+                margin-top: 3vh;
+                margin-left: 4%;
+            }
+            h3,h4{
+                color: rgb(46, 44, 44);
+            }
+            textarea{
+                width:70%;
+                height:10vh;
+            }
+            .feedback ::placeholder{
+                position:absolute;
+                top:4vh;
+                left:40%;
+            }
+            .buttons{
+                display:flex;
+                margin-top: 3vh;
+            }
+            .submit{
+                margin-left: 30%;
+                margin-right: 5%;
+                margin-bottom:10vh;
+                
+            }
+            .buttons button{
+                background-color: rgb(141, 188, 226);
+                width:140%;
+                height: 4vh;
+                border:1px solid rgb(99, 91, 91);
+                border-radius:5px;
+                color:black;
+            }
+            .footercon{
+                padding-top: 5vh;
+                background-image: url(https://media.istockphoto.com/vectors/dripping-paint-yogurt-or-milk-flowing-down-vector-id987484820?k=6&m=987484820&s=170667a&w=0&h=aYffApNaszn359OLLwXIPAlsIdJt7zP2j_WjBrB5s2w=);
+                mix-blend-mode:multiply;
+                padding-bottom: 2vh;  
+            }
+            .footer{
+                width:100%;
+                display:flex;
+                justify-content:center; 
+            }
+            .address,.contact,.time{
+                position: relative;
+                font-size: larger;
+                color:rgb(105, 3, 3);
+                padding-left: 8%;  
+            }
+            .address{
+                width:33%;    
+            }
+            hr{
+                width:50%;
+                position:relative;
+                top:1vh;
+                border:0.1px solid rgb(163, 153, 153);
+            }
+            .contact{
+                width:33%;
+            }
+            .time{
+                width:30%;
+            }
+            .content1{
+                position:relative;
+                top:4vh;
+                color: rgb(9, 0, 0);
+                font-family:Lustria;
+                font-size:medium;    
+            }
+            .sun{
+                position:relative;
+                top:1vh;
+            }
+            .loc,.mob,.phn,.email,.tri,.fol{
+                color:rgba(113, 13, 50, 0.863);
+                position: relative;
+                right:2.5%;
+                line-height:25px;
+            }
+            .copy{
+                display:flex;
+                padding-left:5%;
+            }
+            .c{
+                margin-top: 1%;
+                color:rgb(37, 6, 1);
+            }
+            .v{
+                margin-left: 2%;
+                font-size:40px;    
+            }
+            .wa{
+                color:rgba(8, 180, 8, 0.808);
+                
+            }
+            .fb{
+                color:rgba(0, 0, 255, 0.559);
+            }
+            .insta{
+                color:rgb(250, 5, 46);
+            }
+            .tw{
+                color: rgb(79, 129, 205);
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="title">
+            <div class="name">Icy Quake</div>
+            <div class="logo"><img src="https://thumbs.dreamstime.com/b/attractive-vanilla-ice-cream-cartoon-design-style-playing-juggling-vector-illustration-177563322.jpg" width="120px" height="100px"/></div>
+            <div class="name">Icy Quake</div>
+        </div>
+        <div class="nav">
+            <div><a href="http://127.0.0.1:5500/Home.html">Home</a></div>
+            <div><a href="http://127.0.0.1:5500/About%20us.html">About us</a></div>
+            <div><a href="http://127.0.0.1:5500/menu.html">Menu</a></div>
+            <div><a href="http://127.0.0.1:5500/book%20an%20event.html">Book an Event</a></div>
+            <div><a href="http://127.0.0.1:5500/Reviews.html">Reviews</a></div>
+            <div><a href="http://127.0.0.1:5500/Locate Us.html">Locate Us</a></div>
+         </div>
+        <div class="container">
+            <div class="content">
+                <p><i class="quote fa-solid fa-quote-left"></i>Ice-cream or Cakes, Why just at our store, when our exotic ice-creams can be available at your door step as well. Big or small, indoor or outdoor, Icy Quake is there to make your gatherings end on a sweet note.
+                    We will provide our service for weddings, birthday parties, Carnivals, Special Events and corporate events we provide a variety of packages anywhere in Warangal. We are happy to travel near or far and always love to work with ice-cream lovers to create custom flavours.
+                    We work with some of the most popular caterers in Warangal. If you are throwing a party ask about adding Icy Quake to the Events to add more extra Coolness to your parties...<i class="quote fa-solid fa-quote-right"></i>
+                </p>
+                
+            </div>
+            <div class="details">
+                <div class="row1">
+                    <input type="text" placeholder="Enter your name" value=""/>
+                    <input type="text" placeholder="Enter Mobile number" value=""/>
+                    <input type="text" placeholder="Enter Alternate mobile number" value=""/>
+                </div>
+                <div class="row2"> 
+                    <input type="email" placeholder="Enter E-mail Id" value=""/>
+                    <input type="text" placeholder="Enter your Area" value=""/>
+                    <input type="text" placeholder="Enter your city" value=""/>
+                </div>
+                <div class="row3">
+                    <input type="text" placeholder="Type of Event" value=""/>
+                    <input type="text" placeholder="Enter Mobile number" value=""/>
+                    <input type="text" placeholder="Expected no. of Guests" value=""/>
+                </div>
+            </div>
+            <div class="reference">
+                <h3>How do you know about Icy Quake ?</h3>
+                <select>
+                    <option value="1" selected>Through website</option>
+                    <option value="2">By friend</option>
+                    <option value="3">By a reference</option>
+                    <option value="4">General Search</option>
+                    <option value="5">Others</option>
+                </select>
+            </div>
+            <div class="code">
+                <div><h4>Enter below Code:</h4></div>
+                <div class="incode">
+                    <input type="txt" value="1234"/> <span><button><i class="fa-solid fa-arrows-rotate"></i></button> </span><span><input type="text" placeholder="code" value=""/></span>
+                </div>
+            </div>
+            <div class="feedback"><textarea rows="" cols="" placeholder="Message/Feedback"></textarea></div>
+            <div class="buttons">
+                <div class="submit"><button>Submit</button></div>
+                <div class="reset"><button>Reset</button></div>
+            </div>
+        </div>
+        <div class="footercon">
+            <div class="footer">
+                <div class="address col-sm-4">
+                    <div><h2>Address</h2></div>
+                    <div><hr/></div>
+                    <div class="content1">
+                       <div><p><i class="loc fa-solid fa-location-dot"></i><span>1-218/4,near Ramnagar Towers, Ramnagar, Warangal,Telangana-506001</span></p></div>
+                    </div>
+                </div>
+                <div class="contact col-sm-4">
+                    <div><h2>Contact</h2></div>
+                    <div><hr/></div>
+                    <div class="content1">
+                        <div><i class="mob fa-solid fa-mobile"></i>+91 8886 256 356</div>
+                        <div><i class="phn fa-solid fa-phone"></i>0870-306 401</div>
+                        <div><i class="email fa-solid fa-envelope"></i>bolleboinavamshikrishna@gmail.com</div>
+                    </div>
+                </div>
+                <div class="time col-sm-4">
+                    <div><h2>Timings</h2></div>
+                    <div><hr/></div>
+                    <div class="content1">
+                        <div>
+                            <i class="tri fa-solid fa-caret-right"></i><b>(Mon-Sat)</b><br/>
+                            Opens at 9:00AM<br/>
+                            Closes at 10:00PM
+                        </div>
+                        <div class="sun">
+                            <p>
+                                <i class="tri fa-solid fa-caret-right"></i><b>(Sunday)</b><br/>
+                                Opens at 11:00AM<br/>
+                                Closes at 7:00PM
+                            </p>
+                        </div>        
+                    </div>
+                </div>  
+            </div>
+            <div class="copy">
+                <div class="c">@ Copyrights 2022 by Icy Quake</div>
+                <div class="v"><a href="https://api.whatsapp.com/send/?phone=%2B918886256356&text&type=phone_number&app_absent=0"/><i class="wa fa-brands fa-square-whatsapp"></i></div>
+                <div class="v"/><a href="https://www.facebook.com/profile.php?id=100012901448409"/><i class="fb fa-brands fa-facebook"></i></div>
+                <div class="v"><a href="https://www.instagram.com/vam_c_krishna0206/"/><i class="insta fa-brands fa-instagram"></i></div>
+                <div class="v"><a href="https://twitter.com/VamCkrishna0206"/><i class="tw fa-brands fa-twitter"></i></div>
+            </div>
+           </div>
+        </div>
+
+    </body>
+</html>

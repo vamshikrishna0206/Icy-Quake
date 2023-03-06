@@ -1,0 +1,607 @@
+<html>
+    <head>
+        <title>Icy Quake</title>
+        <link rel="icon" href="https://www.charta-der-vielfalt.de/uploads/tx_dreipccdvdiversity/favicon_rund_180x180.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Frijole&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Frijole&family=Patrick+Hand&display=swap" rel="stylesheet"> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Athiti:wght@200&family=Permanent+Marker&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lustria&family=Permanent+Marker&display=swap" rel="stylesheet">
+  <style>
+            *{
+                margin:0px;
+                
+            }
+            .title{
+                display:flex;
+                justify-content: space-around;
+                background-color: rgba(253, 237, 245, 0.744);
+            }
+            .title img{
+                mix-blend-mode: multiply;
+            }
+            .name{
+                width:42%;
+                font-size:60px;
+                font-style: oblique;
+                position:relative;
+                top:1.5vh;
+                text-align: center;
+                font-weight: bolder;
+                text-shadow: 5px 5px  rgba(150, 217, 250, 0.774);     
+                -webkit-text-fill-color:rgba(3, 65, 107, 0.692);        
+            }
+            .logo{
+                width: 100px;
+                height: 100px;
+                position: relative;
+                animation: example 10s infinite;
+                animation-timing-function: ease;
+            } 
+            @keyframes example {
+                    
+                    0% {
+                        left:0px;
+                         top:0px;
+                        }
+                    30%{
+                        left:150px;
+                        top:0px;
+                    }
+                    60%{
+                        left:-150px;
+                        top:0px;
+                    }
+                    90%{
+                        left:0px;
+                        top:0px;
+                    }
+            }
+            .nav{
+                width:100%;
+                height:10vh;
+                background-color: rgb(143, 68, 98);
+                display:flex;
+                justify-content: space-around;
+            }
+            .nav div{
+                position: relative;
+                top:3vh;
+            }
+            .nav a{
+                text-decoration: none;
+                font-size: larger;
+                font-weight:550;
+                color:rgb(240, 240, 221);
+            }
+            .nav a:after{
+                content:"";
+                position: absolute;
+                background-color:rgb(240, 240, 221);
+                height:3px;
+                width:0;
+                left:0;
+                bottom:5vh;
+                transition: 0.3s;
+            }
+            .nav a:hover:after{
+                width:100%;
+            }
+            .scontainer{
+                background-color: rgba(253, 237, 245, 0.744);
+            }
+            .mission{
+                width:100%;
+                height:100vh;
+                display:flex;    
+            }
+            .mispic{
+                width:50%;
+                background-image:url("https://i.pinimg.com/originals/5d/73/48/5d73481a91cb55d37889bcbf5b827c06.jpg");
+                background-size: cover;
+            }
+            .miscon{
+                width:50%;
+                text-align: center; 
+            }
+            .matter{
+                width:50%;
+                position:relative;
+                top:35vh;
+                left:25%;
+                text-align: center;
+            }
+            .tit{
+                color:rgba(180, 9, 109, 0.959);
+                font-size: larger;
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+                font-weight: bolder;
+            }
+            .subtit{
+                font-style: oblique;
+                font-family:Moon Dance;
+                font-weight: bold;
+                font-size:150%;
+                color: rgb(143, 4, 4);
+                word-spacing: 2px;
+                letter-spacing: 2px;
+            }
+            .para{
+                position:relative;
+                top:3vh;
+                font-style: oblique;
+                color:rgb(65, 75, 75);
+                font-size:15px;
+                letter-spacing:0.1px;
+                font-family:monospace;
+            }
+            .place{
+                width:100%;
+                height:100vh;
+                display: flex;
+            }
+            .placecon{
+                width:50%;
+            }
+            .placepic{
+                width:50%;
+                background-size:cover;
+            }
+            .flavour{
+                width:100%;
+                height:100vh;
+                display:flex;
+                background-color: rgba(253, 237, 245, 0.744);
+            }
+            .flavourpic{
+                width:50%;
+            }
+            .flavourcon{
+                width:50%;
+                border-bottom:1px solid rgba(249, 227, 227, 0.879)
+            }
+            .gallery{
+                width:100%;
+                text-align: center;
+                padding-top: 8vh;  
+            }
+            .g{
+                padding-top: 6vh;
+                padding-left: 4%;
+                width: 95%;
+                height: 97%;
+                margin-left: 1%;
+                display: grid;
+                grid-template-columns: auto auto auto;
+                text-align: center;   
+            }
+            .x{
+                width:85%;
+                height:75%;
+                border-radius: 10px;
+                box-shadow: 1px 1px 10px 10px  #f905052f;
+            }
+            .x img{
+                width:97%;
+                height:94%;
+                border-radius: 10px;
+                margin-top: 2%;
+            }
+           .Testcon{
+			    position: relative;
+			    width: 100%;
+			    min-height: 450px;
+			    background-color: rgba(253, 237, 245, 0.744);
+                padding-bottom: 5vh;
+		    }
+		.Testcon .content{
+			width: 80%;
+			min-height: inherit;
+			margin: 30px auto;
+			text-align: center;	
+		}
+		.content .testRow{
+			width: 100%;
+			min-height: inherit;
+			position: relative;
+			overflow: hidden;
+		}
+		.testRow .testItem{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
+		.testRow .testItem:not(.active){
+			top: 0;
+			left: -100%;
+		}
+		.testRow .testItem img{
+			width: 120px;
+			height: 120px;
+			border-radius: 50%;
+			object-fit: cover;
+			margin-bottom: 5px;
+			outline: 2px solid #006994;
+			outline-offset: 2px;
+		}
+		.testRow .testItem h3{
+			font-size: 30px;
+			padding: 5px;
+            color:rgb(6,110,110)
+		}
+		.testRow .testItem h4{
+			font-style: oblique;
+            color:rgb(85, 153, 153);  
+		}
+		.testRow .testItem p{
+			line-height: 1.2;
+			padding: 12px;
+            font-style: oblique;
+            color:rgb(65, 75, 75);
+            font-size:15px;
+            font-family:monospace;
+		}
+		.content .indicators{
+			position: absolute;
+			bottom: 30px;
+			left: 50%;
+			transform: translateX(-50%);
+			padding: 5px;
+			cursor: pointer;
+		}
+		.content .indicators .dot{
+			width: 10px;
+			height: 10px;
+			margin: 0px 3px;
+			border: 3px solid #aaa;
+			border-radius: 50%;
+			display: inline-block;
+			transition: background-color 0.5s ease;
+		}
+		.content .indicators .active{
+			background-color: #006994;
+		}
+        .quote{
+            position: relative;
+            bottom:10%;
+            padding-right: 1%;  
+            color:rgb(166, 70, 137);  
+            }
+		@keyframes next1{
+			from{
+				left: 0%;
+			}
+			to{
+				left: -100%;
+			}
+		}
+		@keyframes next2{
+			from{
+				left: 100%;
+			}
+			to{
+				left: 0%;
+			}
+		}
+		@keyframes prev1{
+			from{
+				left: 0%;
+			}
+			to{
+				left: 100%;
+			}
+		}
+		@keyframes prev2{
+			from{
+				left: -100%;
+			}
+			to{
+				left: 0%;
+			}
+		}
+            .footercon{
+                padding-top: 5vh;
+                background-image: url(https://media.istockphoto.com/vectors/dripping-paint-yogurt-or-milk-flowing-down-vector-id987484820?k=6&m=987484820&s=170667a&w=0&h=aYffApNaszn359OLLwXIPAlsIdJt7zP2j_WjBrB5s2w=);
+                mix-blend-mode:multiply;
+                padding-bottom: 2vh;  
+            }
+            .footer{
+                width:100%;
+                display:flex;
+                justify-content:center; 
+            }
+            .address,.contact,.time{
+                position: relative;
+                font-size: larger;
+                color:rgb(105, 3, 3);
+                padding-left: 8%;  
+            }
+            .address{
+                width:33%;    
+            }
+            hr{
+                width:50%;
+                position:relative;
+                top:1vh;
+                border:0.1px solid rgb(163, 153, 153);
+            }
+            .contact{
+                width:33%;
+            }
+            .time{
+                width:30%;
+            }
+            .content{
+                position:relative;
+                top:4vh;
+                color: rgb(9, 0, 0);
+                font-family:Lustria;
+                font-size:medium;    
+            }
+            .sun{
+                position:relative;
+                top:1vh;
+            }
+            .loc,.mob,.phn,.email,.tri,.fol{
+                color:rgba(113, 13, 50, 0.863);
+                position: relative;
+                right:2.5%;
+                line-height:25px;
+            }
+            .copy{
+                display:flex;
+                padding-left:5%;
+            }
+            .c{
+                margin-top: 1%;
+                color:rgb(37, 6, 1);
+            }
+            .v{
+                margin-left: 2%;
+                font-size:40px;    
+            }
+            .wa{
+                color:rgba(8, 180, 8, 0.808);
+                
+            }
+            .fb{
+                color:rgba(0, 0, 255, 0.559);
+            }
+            .insta{
+                color:rgb(250, 5, 46);
+            }
+            .tw{
+                color: rgb(79, 129, 205);
+            } 
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="title">
+                <div class="name">Icy Quake</div>
+                <div class="logo"><img src="https://thumbs.dreamstime.com/b/attractive-vanilla-ice-cream-cartoon-design-style-playing-juggling-vector-illustration-177563322.jpg" width="120px" height="100px"/></div>
+                <div class="name">Icy Quake</div>
+            </div>
+            <div class="nav">
+                <div><a href="http://127.0.0.1:5500/Home.html">Home</a></div>
+                <div><a href="http://127.0.0.1:5500/About%20us.html">About us</a></div>
+                <div><a href="http://127.0.0.1:5500/menu.html">Menu</a></div>
+                <div><a href="http://127.0.0.1:5500/book%20an%20event.html">Book an Event</a></div>
+                <div><a href="http://127.0.0.1:5500/Reviews.html">Reviews</a></div>
+                <div><a href="http://127.0.0.1:5500/Locate Us.html">Locate Us</a></div>
+            </div>
+            <div class="scontainer">
+                <div class="mission">
+                    <div class="mispic"></div>
+                    <div class="miscon">
+                        <div class="matter">
+                            <div class="tit"><h1>Our Mission</h1></div>
+                            <div class="subtit">Creamylicious!</div>
+                            <div class="para"><h4>To offer our Customers, the best quality experience with the finest ingredients with the most creative and Innovative flavours...</h4></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="place">
+                    <div class="placecon">
+                        <div class="matter">
+                            <div class="tit"><h1>Our Place</h1></div>
+                            <div class="subtit">Ice by the Sea!</div>
+                            <div class="para"><h4>The place we offer customers with a good environment and good ventilation..We serves the customers with maintaining the quality dress code and by following all the rules and regulations to satisfy the customers more... </h4></div>
+                        </div>
+                    </div>
+                    <div class="placepic">
+                        <img src="https://static.wixstatic.com/media/84770f_9a956bbd2dda4af5b1ec35c35d26c07b~mv2_d_3840_2160_s_2.jpg/v1/fill/w_906,h_975,al_r,q_85,usm_0.66_1.00_0.01,enc_auto/84770f_9a956bbd2dda4af5b1ec35c35d26c07b~mv2_d_3840_2160_s_2.jpg" width="100%" height="100%"/>
+                    </div>
+                </div>
+                <div class="flavour">
+                    <div class="flavourpic">
+                        <img src="https://i.pinimg.com/originals/a7/c9/44/a7c9444a3074165929a69d9ce5e51173.jpg" width="100%" height="100%"/>
+                    </div>
+                    <div class="flavourcon">
+                        <div class="matter">
+                            <div class="tit"><h1>Our Flavours</h1></div>
+                            <div class="subtit">Fresh n' Tasty! </div>
+                            <div class="para"><h4>We offer different types of flavours which are unique...The ingredinets we use are of natural and innovative flavours with highy quality...</h4></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery">
+                        <div class="tit"><h1>Foot-Prints</h1></div>
+                        <div class="subtit">Laughter is Louder!</div>
+                        <div class="g">
+                            <div class="x"><img src="https://cdn8.dissolve.com/p/D943_40_306/D943_40_306_1200.jpg"/></div>
+                            <div class="x"><img src="https://th.bing.com/th/id/R.69dd2fa2450b428fc37f3cce297a29a3?rik=PxAgd5LUUcH%2fvw&riu=http%3a%2f%2ffoodlets.com%2fwp-content%2fuploads%2f2014%2f01%2fIMG_2987.jpg&ehk=6mLoDpntlBvT1Ug%2bF2rxCAZBDtC4ub8HmvnBXt9w4r8%3d&risl=&pid=ImgRaw&r=0"/></div>
+                            <div class="x"><img src="https://th.bing.com/th?q=Happy+People+Eating+Ice+Cream&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.5&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247"/></div>
+                            <div class="x"><img src="https://www.shineorthodonticsco.com/wp-content/uploads/2020/10/early-orthodontic-treatment.jpg"/></div>
+                            <div class="x"><img src="https://www.mireiarodriguez.com/wp-content/uploads/2015/07/dots70.jpeg"/></div>
+                            <div class="x"><img src="https://eclecticrecipes.com/wp-content/uploads/2014/02/pita-4-600x400.jpg"/></div>
+                        </div>      
+                </div>
+                <div class="Testcon">
+                    <div class="content">
+                        <div class="tit"><h1>Testimonials</h1></div>
+                        <div class="subtit">Hearts from Customers! </div>
+                        <section class="testRow">
+                            <div class="testItem active">
+                                <img src="https://th.bing.com/th/id/OIP.KpIUWCjmZu9m2r9IW1kNhAAAAA?pid=ImgDet&w=193&h=144&c=7&dpr=1.5">
+                                <h3>Kittu</h3>
+                                <h4>Nkd,Wgl</h4>
+                                <p><i class="quote fa-solid fa-quote-left"></i>Hello everyone, I visited this Icy Quake parlour with my friends. The facilities were quiet good. The management was friendly in nature. The flavours were of unique taste with good quality..The prices are of satisfactory...<i class="quote fa-solid fa-quote-right"></i></p> 
+                            </div>
+                            <div class="testItem">
+                                <img src="https://th.bing.com/th/id/OIP.4sRSBb8K0jrMeV5P73yRXgHaIY?pid=ImgDet&w=193&h=218&c=7&dpr=1.5">
+                                <h3>Sreekanth</h3>
+                                <h4>kishanpura,Hnk</h4>
+                                <p><i class="quote fa-solid fa-quote-left"></i>Hai,Iam Sreekanth, recently I went to Icy Quake parlour. Their interior ambience was pretty good. The tastes were very unique and tasty. Visit once you will visit next time automatically for sure...<i class="quote fa-solid fa-quote-right"></i></p>
+                            </div>
+                            <div class="testItem">
+                                <img src="https://th.bing.com/th/id/OIP.vuq3G1pcDR2qJUTJo7xtVwHaFj?pid=ImgDet&w=193&h=144&c=7&dpr=1.5">
+                                <h3>Rama Krishna</h3>
+                                <h4>Nkd,Wgl</h4>
+                                <p><i class="quote fa-solid fa-quote-left"></i>I spent some time in Icy Quake, it was really good to see a parlour with variety of delicious items. The flavours are of very innovative and creative to see. Try once you will never forget this taste again. <i class="quote fa-solid fa-quote-right"></i></p>   
+                            </div>
+                            <div class="testItem">
+                                <img src="https://th.bing.com/th/id/OIP.zJo0aIOkQzVHTvtlCSP7MAHaJQ?w=144&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7">
+                                <h3>Rajashekhar</h3>
+                                <h4>Nspt,Wgl</h4>
+                                <p><i class="quote fa-solid fa-quote-left"></i>It was very comfortable to spend the time in Icy Quake and I tasted different shakes and ice-creams. The taste was like Awesome, I enjoyed alot by their special flavours. I want to visit for many times.. <i class="quote fa-solid fa-quote-right"></i></p>
+                            </div>
+                            <div class="testItem">
+                                <img src="https://th.bing.com/th/id/OIP.O3Ljoj2HEw3SpeHiZnMlFgHaE7?w=236&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7">
+                                <h3>Sai Kumar</h3>
+                                <h4>Hanamkonda</h4>
+                                <p><i class="quote fa-solid fa-quote-left"></i>The Ice Creams are fresh and really tasty.The staff is courteous too. Amidst the array of flavors, the summer specials are THE best... Wanna taste once you will never find same taste ever than this..<i class="quote fa-solid fa-quote-right"></i> </p>
+                            </div>
+                        </section>
+                        <section class="indicators">
+                            <div class="dot active" attr='0' onclick="switchTest(this)"></div>
+                            <div class="dot" attr='1' onclick="switchTest(this)"></div>
+                            <div class="dot" attr='2' onclick="switchTest(this)"></div>
+                            <div class="dot" attr='3' onclick="switchTest(this)"></div>
+                            <div class="dot" attr='4' onclick="switchTest(this)"></div>
+                        </section>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    // Access the testimonials
+                    let testSlide = document.querySelectorAll('.testItem');
+                    // Access the indicators
+                    let dots = document.querySelectorAll('.dot');
+                    var counter = 0;
+                    // Add click event to the indicators
+                    function switchTest(currentTest){
+                        currentTest.classList.add('active');
+                        var testId = currentTest.getAttribute('attr');
+                        if(testId > counter){
+                            testSlide[counter].style.animation = 'next1 1s ease-in forwards';
+                            counter = testId;
+                            testSlide[counter].style.animation = 'next2 1s ease-in forwards';
+                        }
+                        else if(testId == counter){return;}
+                        else{
+                            testSlide[counter].style.animation = 'prev1 1s ease-in forwards';
+                            counter = testId;
+                            testSlide[counter].style.animation = 'prev2 1s ease-in forwards';
+                        }
+                        indicators();
+                    }
+                    // Add and remove active class from the indicators
+                    function indicators(){
+                        for(i = 0; i < dots.length; i++){
+                            dots[i].className = dots[i].className.replace(' active', '');
+                        }
+                        dots[counter].className += ' active';
+                    }
+                    // Code for auto sliding
+                    function slideNext(){
+                        testSlide[counter].style.animation = 'next1 0.5s ease-in forwards';
+                        if(counter >= testSlide.length - 1){
+                            counter = 0;
+                        }
+                        else{
+                            counter++;
+                        }
+                        testSlide[counter].style.animation = 'next2 0.5s ease-in forwards';
+                        indicators();
+                    }
+                    function autoSliding(){
+                        deleteInterval = setInterval(timer, 3000);
+                        function timer(){
+                            slideNext();
+                            indicators();
+                        }
+                    }
+                    autoSliding();
+                    // Stop auto sliding when mouse is over the indicators
+                    const container = document.querySelector('.indicators');
+                    container.addEventListener('mouseover', pause);
+                    function pause(){
+                        clearInterval(deleteInterval);
+                    }
+                    // Resume sliding when mouse is out of the indicators
+                    container.addEventListener('mouseout', autoSliding);
+                </script>
+               <div class="footercon">
+                <div class="footer">
+                    <div class="address col-sm-4">
+                        <div><h2>Address</h2></div>
+                        <div><hr/></div>
+                        <div class="content">
+                           <div><p><i class="loc fa-solid fa-location-dot"></i><span>1-218/4,near Ramnagar Towers, Ramnagar, Warangal,Telangana-506001</span></p></div>
+                        </div>
+                    </div>
+                    <div class="contact col-sm-4">
+                        <div><h2>Contact</h2></div>
+                        <div><hr/></div>
+                        <div class="content">
+                            <div><i class="mob fa-solid fa-mobile"></i>+91 8886 256 356</div>
+                            <div><i class="phn fa-solid fa-phone"></i>0870-306 401</div>
+                            <div><i class="email fa-solid fa-envelope"></i>bolleboinavamshikrishna@gmail.com</div>
+                        </div>
+                    </div>
+                    <div class="time col-sm-4">
+                        <div><h2>Timings</h2></div>
+                        <div><hr/></div>
+                        <div class="content">
+                            <div>
+                                <i class="tri fa-solid fa-caret-right"></i><b>(Mon-Sat)</b><br/>
+                                Opens at 9:00AM<br/>
+                                Closes at 10:00PM
+                            </div>
+                            <div class="sun">
+                                <p>
+                                    <i class="tri fa-solid fa-caret-right"></i><b>(Sunday)</b><br/>
+                                    Opens at 11:00AM<br/>
+                                    Closes at 7:00PM
+                                </p>
+                            </div>        
+                        </div>
+                    </div>  
+                </div>
+                <div class="copy">
+                    <div class="c">@ Copyrights 2022 by Icy Quake</div>
+                    <div class="v"><a href="https://api.whatsapp.com/send/?phone=%2B918886256356&text&type=phone_number&app_absent=0"/><i class="wa fa-brands fa-square-whatsapp"></i></div>
+                    <div class="v"/><a href="https://www.facebook.com/profile.php?id=100012901448409"/><i class="fb fa-brands fa-facebook"></i></div>
+                    <div class="v"><a href="https://www.instagram.com/vam_c_krishna0206/"/><i class="insta fa-brands fa-instagram"></i></div>
+                    <div class="v"><a href="https://twitter.com/VamCkrishna0206"/><i class="tw fa-brands fa-twitter"></i></div>
+                </div>
+               </div>
+            </div>
+        </div>
+    </body>
+</html>

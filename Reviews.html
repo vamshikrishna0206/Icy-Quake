@@ -1,0 +1,564 @@
+<html>
+    <head>
+        <title>Icy Quake</title>
+        <link rel="icon" href="https://www.charta-der-vielfalt.de/uploads/tx_dreipccdvdiversity/favicon_rund_180x180.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lustria&family=Permanent+Marker&display=swap" rel="stylesheet">
+        <style>
+             *{
+                margin:0px;
+            }
+            .title{
+                display:flex;
+                justify-content: space-around;
+                background-color: rgba(253, 237, 245, 0.744);
+            }
+            .logo{
+                mix-blend-mode: multiply;
+                width: 100px;
+                height: 100px;
+                position: relative;
+                animation: example 10s infinite;
+                animation-timing-function: ease;
+            } 
+            @keyframes example {
+                    
+                    0% {
+                        left:0px;
+                         top:0px;
+                        }
+                    30%{
+                        left:150px;
+                        top:0px;
+                    }
+                    60%{
+                        left:-150px;
+                        top:0px;
+                    }
+                    90%{
+                        left:0px;
+                        top:0px;
+                    }
+            }
+            body{
+                background-color: rgba(253, 237, 245, 0.744);
+            }
+            
+            .name{
+                width:42%;
+                font-size:60px;
+                font-style: oblique;
+                position:relative;
+                top:1.5vh;
+                text-align: center;
+                font-weight: bolder;
+                text-shadow: 5px 5px  rgba(150, 217, 250, 0.774);     
+                -webkit-text-fill-color:rgba(3, 65, 107, 0.692);              
+            }
+            .nav{
+                width:100%;
+                height:10vh;
+                background-color: rgb(143, 68, 98);
+                display:flex;
+                justify-content: space-around;
+            }
+            .nav div{
+                position: relative;
+                top:3vh;
+                
+            }
+            .nav a{
+                text-decoration: none;
+                font-size: larger;
+                font-weight:550;
+                color:rgb(240, 240, 221);
+            }
+            .nav a:after{
+                content:"";
+                position: absolute;
+                background-color:rgb(240, 240, 221);
+                height:3px;
+                width:0;
+                left:0;
+                bottom:5vh;
+                transition: 0.3s;
+            }
+            .nav a:hover:after{
+                width:100%;
+            }
+            .page{
+                background-color: rgba(253, 237, 245, 0.744);
+                padding-bottom: 30vh;
+                
+                
+            }
+            .review{
+                display:flex;
+                padding-top:  15vh;
+                justify-content: center;
+            }
+            .rating{
+                width:60%;
+                height:70vh;
+                box-shadow:inset 1px 1px 2px rgb(167, 131, 131),1px 1px 2px rgb(204, 160, 160) ;
+                display: flex;
+            }
+            .rating1{
+                display: grid;  
+                grid-template-columns:auto auto auto;
+                margin:8%;
+                top:10vh;
+                font-size:25px;
+                font-weight: bolder;
+                color: rgb(72, 67, 67);
+                
+            }
+            .avg{
+                width: 20%;
+                text-align: center;
+                position: relative;
+                top:25vh;
+                font-size: larger;
+                                
+            }
+            .avg h1{
+                color:brown;
+            }
+            .write{
+                position:relative;
+                left:70%;
+                top:5vh;
+                width:150%;
+
+            }
+            .write a{
+                text-decoration: none;
+                color:rgba(6, 28, 125, 0.607)
+            }
+            .star{
+                color:rgb(227, 151, 36);
+            }
+            .customer{
+                width:70%;
+                height:20vh;
+                position:relative;
+                top:20vh;
+                left:15%;
+                padding-bottom:8vh;
+            }
+            .pic{
+                height:8vh;
+                display:flex;
+            }
+            .im{
+                margin-left: 3%;
+            }
+            .im img{
+              
+                border-radius: 50%;
+            }
+            .cust{
+                width:60%;
+                
+                
+            }
+            .cust h3{
+                color:rgba(75, 2, 2, 0.751);
+                font-size:20px;
+            }
+            .cust div{
+                text-indent: 4%;
+                font-size: small;
+
+            }
+            .num{
+                width:30%;
+                text-align: center;
+                padding-right: 2%;
+                
+            }
+            .x{
+                font-size: small;
+                color:rgb(61, 17, 2)
+            }
+            .s{
+                color:rgba(90, 90, 5, 0.742);
+                font-size: small;
+            }
+
+            .msg{
+                height:10vh;
+            }
+            .msg p{
+                padding:2%;
+            
+                color:rgb(65, 75, 75);
+                letter-spacing:0.1px;
+
+            }
+            .like{
+                width:30%;
+                padding-top: 2vh;
+                display: flex;
+                justify-content:space-around;
+                color:rgba(2, 2, 43, 0.701);
+                
+            }
+            .like span{
+                font-size: small;
+            }
+            button{
+                background-color: transparent;
+                border: none;
+            }
+            .li{
+                color:rgba(2, 2, 43, 0.701);  
+            }
+            .footercon{
+                padding-top: 5vh;
+                background-image: url(https://media.istockphoto.com/vectors/dripping-paint-yogurt-or-milk-flowing-down-vector-id987484820?k=6&m=987484820&s=170667a&w=0&h=aYffApNaszn359OLLwXIPAlsIdJt7zP2j_WjBrB5s2w=);
+                mix-blend-mode:multiply;
+                padding-bottom: 2vh;  
+            }
+            .footer{
+                width:100%;
+                display:flex;
+                justify-content:center; 
+            }
+            .address,.contact,.time{
+                position: relative;
+                font-size: larger;
+                color:rgb(105, 3, 3);
+                padding-left: 8%;  
+            }
+            .address{
+                width:33%;    
+            }
+            hr{
+                width:50%;
+                position:relative;
+                top:1vh;
+                border:0.1px solid rgb(163, 153, 153);
+            }
+            .contact{
+                width:33%;
+            }
+            .time{
+                width:30%;
+            }
+            .content{
+                position:relative;
+                top:4vh;
+                color: rgb(9, 0, 0);
+                font-family:Lustria;
+                font-size:medium;    
+            }
+            .sun{
+                position:relative;
+                top:1vh;
+            }
+            .loc,.mob,.phn,.email,.tri,.fol{
+                color:rgba(113, 13, 50, 0.863);
+                position: relative;
+                right:2.5%;
+                line-height:25px;
+            }
+            .copy{
+                display:flex;
+                padding-left:5%;
+            }
+            .c{
+                margin-top: 1%;
+                color:rgb(37, 6, 1);
+            }
+            .v{
+                margin-left: 2%;
+                font-size:40px;    
+            }
+            .wa{
+                color:rgba(8, 180, 8, 0.808);
+                
+            }
+            .fb{
+                color:rgba(0, 0, 255, 0.559);
+            }
+            .insta{
+                color:rgb(250, 5, 46);
+            }
+            .tw{
+                color: rgb(79, 129, 205);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="title">
+                <div class="name">Icy Quake</div>
+                <div class="logo"><img src="https://thumbs.dreamstime.com/b/attractive-vanilla-ice-cream-cartoon-design-style-playing-juggling-vector-illustration-177563322.jpg" width="120px" height="100px"/></div>
+                <div class="name">Icy Quake</div>
+            </div>
+            <div class="nav">
+                <div><a href="http://127.0.0.1:5500/Home.html">Home</a></div>
+                <div><a href="http://127.0.0.1:5500/About%20us.html">About us</a></div>
+                <div><a href="http://127.0.0.1:5500/menu.html">Menu</a></div>
+                <div><a href="http://127.0.0.1:5500/book%20an%20event.html">Book an Event</a></div>
+                <div><a href="http://127.0.0.1:5500/Reviews.html">Reviews</a></div>
+                <div><a href="http://127.0.0.1:5500/Locate Us.html">Locate Us</a></div>
+            </div>
+        </div>
+        <div class="page">
+            <div class="review">
+                <div class="rating">
+                    <div class="rating1">
+                        <div class="item c1"><input type="checkbox"> Excellent</div>
+                        <div class="item p1"><progress value="90" max="100"></progress></div>
+                        <div class="item no"> 112</div>
+                        <div class="item c1"><input type="checkbox"> Good</div>
+                        <div class="item p1"><progress value="50" max="100"></progress></div>
+                        <div class="item no"> 41</div>
+                        <div class="item c1"><input type="checkbox"> Average</div>
+                        <div class="item p1"><progress  value="20" max="100"></progress></div>
+                        <div class="item no"> 20</div>
+                        <div class="item c1"><input type="checkbox"> Poor</div>
+                        <div class="item p1"><progress value="2" max="100"></progress></div>
+                        <div class="item no"> 2</div>
+                        <div class="write"><a href="#">Write a review<span> <i class="fa-solid fa-pen-to-square"></i></span></a></div>
+                    </div>
+
+                    <div class="avg">
+                       <div> <h1>4.8</h1></div>
+                       <div>
+                        <i class="star fa-solid fa-star"></i>
+                        <i class="star fa-solid fa-star"></i>
+                        <i class="star fa-solid fa-star"></i>
+                        <i class="star fa-solid fa-star"></i>
+                        <i class="star fa-solid fa-star-half-stroke"></i>
+                       </div>
+                       <div><p>175 reviews</p></div>
+                    </div>    
+                </div>    
+            </div>
+            <div class="customer">
+                <div class="vamshi">
+                    <div class="pic">
+                        <div class="im"><img src="https://th.bing.com/th/id/OIP.EvA_-R2Jf4ZQviGLQfIKwgHaLH?w=195&h=292&c=7&r=0&o=5&dpr=1.5&pid=1.7" width="50px" height="50px"/></div>
+                        <div class="cust">
+                            <div><h3>Rakesh Arvapalli</h3></div>
+                            <div>Local guide!</div>
+                        </div>
+                        <div class="like">
+                            <div><button><i class="li fa-solid fa-thumbs-up"></i></span> Like</button></div>
+                            <div><button><i class="li fa-solid fa-thumbs-down"></i><span> Dislike</span</button></div>
+                        </div>
+                        <div class="num">
+                            <div>
+                                <i class="s fa-solid fa-star"></i>
+                                <i class="s fa-solid fa-star"></i>
+                                <i class="s fa-solid fa-star"></i>
+                                <i class="s fa-solid fa-star"></i>
+                                <i class="s fa-solid fa-star"></i>
+                            </div>
+                            <div class="x">a month ago</div>
+                        </div>
+                    </div>
+                    <div class="msg">
+                        <p>The taste of each and every flavour is awesome. The quality of ice-creams, shakes, cakes is of unexpectable.. If you are around to this Icy Quake donot forget to taste the ice-cream and cakes </p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="customer">
+                <div class="vamshi">
+                    <div class="pic">
+                        <div class="im"><img src="https://2.bp.blogspot.com/-EoFoT0PV-Gk/WEv7coP0grI/AAAAAAAACrk/-ZxkX9zsSfMkbq4oIhF2yhbpkwzlc3BSACLcB/s640/kavya%2Bmaran%2B%2B%2BGoogle%2BSearch.png" width="50px" height="50px"/></div>
+                        <div class="cust">
+                            <div><h3>Kavya Maran</h3></div>
+                            <div>certified customer!</div>
+                        </div>
+                        <div class="like">
+                            <div><button><i class="li fa-solid fa-thumbs-up"></i></span> Like</button></div>
+                            <div><button><i class="li fa-solid fa-thumbs-down"></i><span> Dislike</span</button></div>
+                        </div>
+                        <div class="num">
+                            <div>
+                                <i class="s fa-solid fa-star"></i>
+                                <i class="s fa-solid fa-star"></i>
+                                <i class="s fa-solid fa-star"></i>
+                                <i class="s fa-solid fa-star"></i>
+                                <i class="s fa-solid fa-star-half-stroke"></i>
+                            </div>
+                            <div class="x">2 months ago</div>
+                        </div>
+                    </div>
+                    <div class="msg">
+                        <p>It's freshly made ice cream. The best place to have ice cream in warangal. The quality is good and worth its price . The sevice is very nice.. </p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="customer">
+                <div class="vamshi">
+                    <div class="pic">
+                        <div class="im"><img src="https://th.bing.com/th/id/OIP.RlgPoClgypumOjZ6i6TBgAAAAA?w=125&h=188&c=7&r=0&o=5&dpr=1.5&pid=1.7" width="50px" height="50px"/></div>
+                        <div class="cust">
+                            <div><h3>Sindhuja sindhu</h3></div>
+                            <div>Local guide!</div>
+                        </div>
+                        <div class="like">
+                            <div><button><i class="li fa-solid fa-thumbs-up"></i></span> Like</button></div>
+                            <div><button><i class="li fa-solid fa-thumbs-down"></i><span> Dislike</span</button></div>
+                        </div>
+                        <div class="num">
+                            <div>
+                                <i class="s fa-solid fa-star"></i>
+                                <i class="s fa-solid fa-star"></i>
+                                <i class="s fa-solid fa-star"></i>
+                                <i class="s fa-solid fa-star"></i>
+                                <i class="s fa-solid fa-star"></i>
+                            </div>
+                            <div class="x">3 months ago</div>
+                        </div>
+                    </div>
+                    <div class="msg">
+                        <p>The Ice Creams are fresh and really tasty.
+                            The staff is courteous too. Amidst the array of flavors, the summer specials are THE best... Wanna taste once you will never find same taste ever than this.. </p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="customer">
+                <div class="vamshi">
+                    <div class="pic">
+                        <div class="im"><img src="https://www.yuvaspeak.com/wp-content/uploads/2017/07/rohit-5.png" width="50px" height="50px"/></div>
+                        <div class="cust">
+                            <div><h3>Rohit Ramana</h3></div>
+                            <div>Local guide!</div>
+                        </div>
+                        <div class="like">
+                            <div><button><i class="li fa-solid fa-thumbs-up"></i></span> Like</button></div>
+                            <div><button><i class="li fa-solid fa-thumbs-down"></i><span> Dislike</span</button></div>
+                        </div>
+                        <div class="num">
+                            <div>
+                                <i class="s fa-solid fa-star"></i>
+                                <i class="s fa-solid fa-star"></i>
+                                <i class="s fa-solid fa-star"></i>
+                                <i class="s fa-solid fa-star"></i>
+                                <i class="s fa-solid fa-star-half-stroke"></i>
+                            </div>
+                            <div class="x">3 months ago</div>
+                        </div>
+                    </div>
+                    <div class="msg">
+                        <p>Taste's as if you are having a real fruit. The fruit flavours and many other flavors are at very low price.
+                            Nothing beats the taste. Service was fast. Staff were very friendly. Shop was very clean. Highly recommend!</p>
+                    </div>    
+                </div>
+            </div>
+            <div class="customer">
+                <div class="vamshi">
+                    <div class="pic">
+                        <div class="im"><img src="https://th.bing.com/th/id/R.6e2fdccb062e456de8ec77d53994d148?rik=%2bxzUSKz2UjXMCQ&riu=http%3a%2f%2fwww.astrosage.com%2fcelebrity-horoscope%2fimg%2fVenkatesh-Iyer-horoscope.jpeg&ehk=IRyJJLYs9Zhx3SFfrOHTjSULLLa0PK4dq%2fA43IPclHo%3d&risl=&pid=ImgRaw&r=0" width="50px" height="50px"/></div>
+                        <div class="cust">
+                            <div><h3>Madhusudhan Iyer</h3></div>
+                            <div>certified customer!</div>
+                        </div>
+                        <div class="like">
+                            <div><button><i class="li fa-solid fa-thumbs-up"></i></span> Like</button></div>
+                            <div><button><i class="li fa-solid fa-thumbs-down"></i><span> Dislike</span</button></div>
+                        </div>
+                        <div class="num">
+                            <div>
+                                <i class="s fa-solid fa-star"></i>
+                                <i class="s fa-solid fa-star"></i>
+                                <i class="s fa-solid fa-star"></i>
+                                <i class="s fa-solid fa-star"></i>
+                                <i class="s fa-solid fa-star"></i>
+                            </div>
+                            <div class="x">4 months ago</div>
+                        </div>
+                    </div>
+                    <div class="msg">
+                        <p>Craving for the ice cream gets stronger. Wanna have the best ice cream in Warangal. An awesome place to be with friends n family. The service is excellent n a well maintained place </p>
+                    </div>    
+                </div>
+            </div>
+            <div class="customer">
+                <div class="vamshi">
+                    <div class="pic">
+                        <div class="im"><img src="https://th.bing.com/th/id/OIP.lKTHBF1o0b4k-MTwhIwdFgAAAA?w=115&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" width="50px" height="50px"/></div>
+                        <div class="cust">
+                            <div><h3>Yashwanth Yash</h3></div>
+                            <div>Local guide!</div>
+                        </div>
+                        <div class="like">
+                            <div><button><i class="li fa-solid fa-thumbs-up"></i></span> Like</button></div>
+                            <div><button><i class="li fa-solid fa-thumbs-down"></i><span> Dislike</span</button></div>
+                        </div>
+                        <div class="num">
+                            <div>
+                                <i class="s fa-solid fa-star"></i>
+                                <i class="s fa-solid fa-star"></i>
+                                <i class="s fa-solid fa-star"></i>
+                                <i class="s fa-solid fa-star"></i>
+                                <i class="s fa-solid fa-star"></i>
+                            </div>
+                            <div class="x">4 months ago</div>
+                        </div>
+                    </div>
+                    <div class="msg">
+                        <p>The quality is awesome and the flavours are very unique which are not somewhere else.. If you are ice-cream lover i will recommend this dhop in Warangal..Hamara Warangal naya wala taste.. </p>
+                    </div>    
+                </div>
+            </div>
+       
+        </div>
+        <div class="footercon">
+            <div class="footer">
+                <div class="address col-sm-4">
+                    <div><h2>Address</h2></div>
+                    <div><hr/></div>
+                    <div class="content">
+                       <div><p><i class="loc fa-solid fa-location-dot"></i><span>1-218/4,near Ramnagar Towers, Ramnagar, Warangal,Telangana-506001</span></p></div>
+                    </div>
+                </div>
+                <div class="contact col-sm-4">
+                    <div><h2>Contact</h2></div>
+                    <div><hr/></div>
+                    <div class="content">
+                        <div><i class="mob fa-solid fa-mobile"></i>+91 8886 256 356</div>
+                        <div><i class="phn fa-solid fa-phone"></i>0870-306 401</div>
+                        <div><i class="email fa-solid fa-envelope"></i>bolleboinavamshikrishna@gmail.com</div>
+                    </div>
+                </div>
+                <div class="time col-sm-4">
+                    <div><h2>Timings</h2></div>
+                    <div><hr/></div>
+                    <div class="content">
+                        <div>
+                            <i class="tri fa-solid fa-caret-right"></i><b>(Mon-Sat)</b><br/>
+                            Opens at 9:00AM<br/>
+                            Closes at 10:00PM
+                        </div>
+                        <div class="sun">
+                            <p>
+                                <i class="tri fa-solid fa-caret-right"></i><b>(Sunday)</b><br/>
+                                Opens at 11:00AM<br/>
+                                Closes at 7:00PM
+                            </p>
+                        </div>        
+                    </div>
+                </div>  
+            </div>
+            <div class="copy">
+                <div class="c">@ Copyrights 2022 by Icy Quake</div>
+                <div class="v"><a href="https://api.whatsapp.com/send/?phone=%2B918886256356&text&type=phone_number&app_absent=0"/><i class="wa fa-brands fa-square-whatsapp"></i></div>
+                <div class="v"/><a href="https://www.facebook.com/profile.php?id=100012901448409"/><i class="fb fa-brands fa-facebook"></i></div>
+                <div class="v"><a href="https://www.instagram.com/vam_c_krishna0206/"/><i class="insta fa-brands fa-instagram"></i></div>
+                <div class="v"><a href="https://twitter.com/VamCkrishna0206"/><i class="tw fa-brands fa-twitter"></i></div>
+            </div>
+           </div>
+        </div>
+    </body>
+</html>
